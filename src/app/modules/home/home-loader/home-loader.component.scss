@@ -1,0 +1,4 @@
+.mainPagebg{position: relative;}
+.mainPagebg::after{display: block; content: ''; height: 70px; width: 100%; background: #2481c9; position: absolute; top: 0;}
+.page-container{height: calc(100vh - 130px);background: #fff;position: relative;z-index: 1;box-shadow: 0 6px 20px 0 rgba(1,1,1,.15);
+padding: 20px; overflow: auto;}

@@ -1,0 +1,22 @@
+header{
+    background: #2481c9;
+    width: 100%;
+    .logo{font-size:30px; line-height: 32px; color: #fff;padding: 20px 0;}
+    .navigation-bg{padding: 24px 0;
+    ul{
+        padding: 0;
+        margin: 0;
+        li{list-style: none; display: inline; padding: 0 20px;
+            :last-child{padding-right: 0;}
+            a{color: #fff;}
+            :hover,  .active-link{color: #c2ff52;}
+            @media only screen and (max-width: 420px) {
+                padding: 0 8px;
+            }
+        }
+    }
+}
+}
+
+
+      

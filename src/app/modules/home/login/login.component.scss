@@ -1,0 +1,18 @@
+.login-form-bg{
+    height: 100%;
+    display: flex;
+    align-items: center;
+.form-signin {
+    width: 500px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;border: solid 1px #ddd;
+    background-color: #fff;
+    border-radius: 5px;
+    .form-signin-heading,
+      .checkbox {
+        margin-bottom: 30px;
+      }
+     
+  }
+}
