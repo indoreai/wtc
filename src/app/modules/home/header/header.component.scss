@@ -1,15 +1,15 @@
 header{
-    background: #2481c9;
-    width: 100%;
-    .logo{font-size:30px; line-height: 32px; color: #fff;padding: 20px 0;}
-    .navigation-bg{padding: 24px 0;
+    background: #fff;
+    width: 100%;border-bottom: solid 1px #efefef;
+    .logo{font-size:20px; line-height: 20px; color: #2481c9;padding: 12px 0 15px 0;}
+    .navigation-bg{padding:0;
     ul{
         padding: 0;
         margin: 0;
-        li{list-style: none; display: inline; padding: 0 20px;
+        li{list-style: none; display: inline-block; padding: 0 20px;
             :last-child{padding-right: 0;}
-            a{color: #fff;}
-            :hover,  .active-link{color: #c2ff52;}
+            a{color: #2481c9; height: 47px;display: inline-block; line-height: 46px;}
+            :hover, .active{color: #2481c9; border-bottom: solid 2px #2481c9;}
             @media only screen and (max-width: 420px) {
                 padding: 0 8px;
             }
@@ -17,6 +17,4 @@ header{
     }
 }
 }
-
-
-      
+  

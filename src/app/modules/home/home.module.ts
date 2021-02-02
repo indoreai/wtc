@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { HomeLoaderComponent } from './home-loader/home-loader.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { CarouselComponent } from './home/carousel/carousel.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { FooterComponent } from './footer/footer.component';
     LoginComponent,
     ContactComponent,
     HomeComponent,
-    HomeLoaderComponent
+    HomeLoaderComponent,
+    CarouselComponent
   ],
   imports: [
     CommonModule,

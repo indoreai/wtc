@@ -6,7 +6,8 @@
  body ::placeholder { opacity: 1; transition: opacity .5s; } 
  body :focus::placeholder { opacity: 0; }
 a, a:hover{text-decoration: none !important;}
-
+h1, h2, h3, h4, h5, h6{font-family: 'Roboto Condensed'; font-weight: bold !important;}
+h1{font-size: 40px;color: #1d5077;}
 ::-webkit-scrollbar {width: 8px;}
 ::-webkit-scrollbar-track {background: #8eb4d1;}
 ::-webkit-scrollbar-thumb {background: #76e37a;}
