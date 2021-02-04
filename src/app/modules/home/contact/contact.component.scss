@@ -1,6 +1,14 @@
 .form-register{padding:20px 20px;border: solid 1px #ddd;}
 ul{
-    li{list-style: none; position: relative; padding: 10px 25px;
-        i{position: absolute; top: 14px; left: 0; font-size: 20px; color: #72c571;}
+    li{list-style: none; position: relative; padding: 6px 25px;
+        i{position: absolute; top: 10px; left: 0; font-size: 20px; color: #72c571;}
+    }
+}
+.mapbg{width: 100%;border: solid 1px #e2e2e2; margin-bottom: 30px; margin-top: 20px;}
+.opening-box{
+    ul {
+        li{font-size: 14px; padding:2px 0;
+            span{font-weight: bold; width: 45px; float: left;}
+        }
     }
 }
