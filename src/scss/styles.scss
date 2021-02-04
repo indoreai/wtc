@@ -3,10 +3,12 @@
 /* color theme start */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 * {padding: 0; margin: 0;}
- body ::placeholder { opacity: 1; transition: opacity .5s; } 
+html, body { height: 100%;  margin: 0;} 
+body ::placeholder { opacity: 1; transition: opacity .5s; } 
  body :focus::placeholder { opacity: 0; }
+ 
 a, a:hover{text-decoration: none !important;}
-h1, h2, h3, h4, h5, h6{font-family: 'Roboto Condensed'; font-weight: bold !important;color: #1d5077;}
+h1, h2, h3, h4, h5, h6{color: #1d5077;}
 h1{font-size: 40px;}
 h2{font-size: 26px !important;}
 ::-webkit-scrollbar {width: 8px;}
@@ -36,3 +38,6 @@ app-dashboard-container{float: left; width: 100%; clear: both;
     app-sidebar{width: 40px;}
     app-admin{padding-left: 55px;}
 }
+
+/*-------- style for common popup ----*/
+

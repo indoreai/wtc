@@ -78,4 +78,15 @@
   .rotateslider-container .arrow.left { left: 0; }
   
   .rotateslider-container .arrow.right { right: 0; }
-  
+  @media screen and (max-width: 991px) {
+    .rotateslider-container{height: 340px;}
+  }
+  @media screen and (max-width: 767px) {
+    .rotateslider-container{height: 280px;}
+  }
+  @media screen and (max-width: 480px) {
+    .rotateslider-container{height: 220px;}
+  }
+  @media screen and (max-width: 280px) {
+    .rotateslider-container{height: 190px;}
+  }

@@ -12,7 +12,6 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CarouselComponent } from './home/carousel/carousel.component';
 
-
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -26,8 +25,8 @@ import { CarouselComponent } from './home/carousel/carousel.component';
   imports: [
     CommonModule,
     RouterModule,
-     HomeRoutingModule
-    
+     HomeRoutingModule,
+     SharedModule
   ]
 })
 export class HomeModule { }

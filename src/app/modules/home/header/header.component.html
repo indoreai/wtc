@@ -1,7 +1,32 @@
 <header>
     <div class="container">
         <div class="row">
-        <div class="col-6">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#">Gurukripa Water Suppliers</a>
+              
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" routerLink="/" routerLinkActive="active"  [routerLinkActiveOptions]="{exact:
+                        true}" data-toggle="collapse" data-target=".navbar-collapse.show">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" routerLink="contact" routerLinkActive="active"  [routerLinkActiveOptions]="{exact:
+                        true}" data-toggle="collapse" data-target=".navbar-collapse.show">Contact Us</a>
+                    </li>
+                  </ul>
+                 
+                </div>
+                <span class="book-now"><a (click)="openDialog()">Book</a></span>
+              </nav>
+        </div>
+    </div>
+</header>
+
+ <!-- <div class="col-6">
             <div class="logo">Gurukripa Water Suppliers</div>
         </div>
         <div class="col-6">
@@ -11,10 +36,7 @@
                         true}">Home</a></li>
                     <li><a routerLink="contact" routerLinkActive="active"  [routerLinkActiveOptions]="{exact:
                         true}">Contact Us</a></li>
-                    <li><a >Book</a></li>
+                    <li class="book-now"><a (click)="openDialog()">Book</a></li>
                 </ul>
             </div>
-        </div>
-        </div>
-    </div>
-</header>
+        </div> -->
