@@ -4,6 +4,10 @@ import { RouterModule } from '@angular/router';
 import { ModalComponent } from './modal/modal.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
 @NgModule({
   declarations: [
 
@@ -12,7 +16,7 @@ import {MatButtonModule} from '@angular/material/button';
     CommonModule,
     RouterModule,
     MatDialogModule,
-    MatButtonModule
+    MatButtonModule,MatFormFieldModule, MatDatepickerModule,MatInputModule 
   ],
   entryComponents: [
     ModalComponent

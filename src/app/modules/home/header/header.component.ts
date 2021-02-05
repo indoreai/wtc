@@ -1,9 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import {MatDialog, MatDialogRef} from '@angular/material/dialog';
+import {MatDialog,} from '@angular/material/dialog';
 import { ModalComponent } from 'src/app/shared/modal/modal.component';
-export interface DialogData {
- 
-}
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -18,6 +16,7 @@ export class HeaderComponent implements OnInit {
   openDialog():void  {
     const dialogRef = this.dialog.open(ModalComponent,{
       width: '450px',
+
     });
     
   }

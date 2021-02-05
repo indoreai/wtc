@@ -7,12 +7,45 @@
     <div class="form-row">
       <label for="phonenumber" class="form-label" autocomplete="off">Enter your phone Number</label>
       <input type="tel" class="form-control"  id="phone">
+      <span class="validation-error">Please Enter correct Number</span>
   </div>
   <div class="form-row">
     <label for="phonenumber" class="form-label">Enter OTP</label>
     <input type="text" class="form-control submit-btn"  id="otp">
+    <span class="validation-error">Please Enter correct OTP</span>
   </div>
   <button mat-flat-button color="primary">Submit</button>
   </form>
+
+  <form>
+    <div class="form-row">
+      <label for="phonenumber" class="form-label" autocomplete="off">Enter your Address</label>
+      <textarea placeholder="" class="form-control"></textarea>
+      <span class="validation-error"></span>
+  </div>
+  <div class="form-row">
+    <label for="phonenumber" class="form-label">Tanker Capacity</label>
+    <select class="form-control" id="capacity">
+      <option>1000</option>
+      <option>2000</option>
+      <option>3000</option>
+      <option>4000</option>
+      <option>5000</option>
+    </select>
+    <span class="validation-error">Please Enter correct OTP</span>
+  </div>
+
+  <div class="form-row date-row">
+    <label>Choose a date</label>
+    <div class="date-box">
+      <input [matDatepicker]="picker" class="form-control">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </div>
+</div>
+
+  <button mat-flat-button color="primary">Submit</button>
+  </form>
+
 </mat-dialog-content>
 
