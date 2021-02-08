@@ -15,7 +15,9 @@ import { CustomerComponent } from './customer/customer.component';
 import { InvoiceComponent } from './invoice/invoice.component';
 import { PaymentComponent } from './payment/payment.component';
 import { RateSchedulerComponent } from './rate-scheduler/rate-scheduler.component';
-
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { SharedModule } from 'src/app/shared/shared.module';
 @NgModule({
   declarations: [
     DashboardContainerComponent,
@@ -36,7 +38,7 @@ import { RateSchedulerComponent } from './rate-scheduler/rate-scheduler.componen
   imports: [
     CommonModule,
     DashboardRoutingModule,
-
+    SharedModule
   ]
 })
 export class DashboardModule { }

@@ -21,5 +21,11 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
   entryComponents: [
     ModalComponent
   ],
+  exports:[
+    MatButtonModule,
+    MatFormFieldModule, 
+    MatDatepickerModule,
+    MatInputModule 
+  ]
 })
 export class SharedModule { }
