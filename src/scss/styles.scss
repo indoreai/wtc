@@ -17,9 +17,6 @@ h2{font-size: 26px !important;}
 ::-webkit-scrollbar-thumb:hover {background: #6fd173;}
 
 
-.btn-primary{background:#2481c9 !important;}
-.btn-primary:hover{background:#3792d9  !important;}
-
 body .form-control{border-radius: 0; margin-bottom: 15px; padding: 5px 10px 7px 10px; height: 32px; font-size: 14px;}
 body .form-control:focus{box-shadow: none;}
 body .btn-lg{ height: 32px; line-height: 5px; border-radius: 0; padding-top: 4px; font-size: 18px;}
@@ -28,11 +25,13 @@ body textarea{height: 200px;}
 
 .button-common{font-size: 16px; border: solid 1px #d5d5d5; color: #7a7a7a; width: 26px; height: 26px; background: none; border-radius: 2px;}
 .button-common:hover{border-color: #2481c9; color: #2481c9;}
+.mat-flat-button.mat-primary{background: #2481c9;height: 30px; line-height: 10px;font-weight: 400;}
+.mat-flat-button.mat-primary:hover{background:#5e8fb5;}
 
 app-dashboard-container{float: left; width: 100%; clear: both;
     app-header{width: 100%;}
     app-sidebar{width: 225px; height: calc(100vh - 40px); background: #fff; float: left;position: absolute; left: 0;transition: transform .3s ease-in-out,width .3s ease-in-out;}
-    app-admin{height: calc(100vh - 40px); width: 100%; float: left; padding-left: 240px;transition: transform .3s ease-in-out,padding .3s ease-in-out;background: #f1f2f7;}
+    app-admin{height: calc(100vh - 40px); width: 100%; float: left; padding-left: 240px;transition: transform .3s ease-in-out,padding .3s ease-in-out;background: #f1f2f7;overflow: hidden;}
 }
 .sidebar-collapse{
     app-sidebar{width: 40px;}
@@ -40,4 +39,6 @@ app-dashboard-container{float: left; width: 100%; clear: both;
 }
 
 /*-------- style for common popup ----*/
-
+.admin-container{
+    h2{font-size: 22px !important; font-weight: 400; color: #444; margin-top: 10px;}
+}
