@@ -2,6 +2,9 @@
 
 /* color theme start */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@import "ag-grid-community/dist/styles/ag-grid.css";
+@import "ag-grid-community/dist/styles/ag-theme-alpine.css";
+
 * {padding: 0; margin: 0;}
 html, body { height: 100%;  margin: 0;} 
 body ::placeholder { opacity: 1; transition: opacity .5s; } 
@@ -47,4 +50,11 @@ app-dashboard-container{float: left; width: 100%; clear: both;
 /*-------- style for common popup ----*/
 .admin-container{
     h2{font-size: 22px !important; font-weight: 400; color: #444; margin-top: 10px;}
+}
+
+/*------ag-grid-style------*/
+.ag-grid{width: 100%; height:500px;
+    .ag-header{height: 32px !important; min-height: 32px !important;}
+    .ag-header-row{height: 32px !important; min-height: 32px !important;}
+    
 }

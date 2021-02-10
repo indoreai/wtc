@@ -18,6 +18,9 @@ import { RateSchedulerComponent } from './rate-scheduler/rate-scheduler.componen
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { AgGridModule } from 'ag-grid-angular';
+import {PanelMenuModule} from 'primeng/panelmenu';
+
 @NgModule({
   declarations: [
     DashboardContainerComponent,
@@ -36,9 +39,9 @@ import { SharedModule } from 'src/app/shared/shared.module';
     RateSchedulerComponent
   ],
   imports: [
-    CommonModule,
+    CommonModule,PanelMenuModule,
     DashboardRoutingModule,
-    SharedModule
+    SharedModule, AgGridModule.withComponents([])
   ]
 })
 export class DashboardModule { }
