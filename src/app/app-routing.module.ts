@@ -9,7 +9,7 @@ const routes: Routes = [
     path: 'admin',
     loadChildren: () => import('../app/modules/dashboard/dashboard.module').then(m => m.DashboardModule)
   },
- 
+  { path: '**', redirectTo: '', pathMatch: 'full' } 
 ];
 
 @NgModule({

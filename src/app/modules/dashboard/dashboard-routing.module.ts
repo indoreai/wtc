@@ -15,40 +15,40 @@ import { RateSchedulerComponent } from './rate-scheduler/rate-scheduler.componen
 const routes: Routes = [{
   path: '', component: DashboardContainerComponent, children: [
     {
-       path: '' , component: AdminComponent, children:[
+      path: '', component: AdminComponent, children: [
         {
-          path: 'dashboard' , component: DashboardComponent
-       },
+          path: 'dashboard', component: DashboardComponent
+        },
         {
-          path: 'vehicel' , component: VehicelComponent
-       },
-       {
-        path: 'role' , component: RoleComponent
-      },
-      {
-        path: 'employee' , component: EmployeeComponent
-      },
-      {
-        path: 'customer' , component: CustomerComponent
-      },
-      {
-        path: 'invoice' , component: InvoiceComponent
-      },
-      {
-        path: 'payment' , component: PaymentComponent
-      },
-      {
-        path: 'rate' , component: RateSchedulerComponent
-      },
-     
+          path: 'vehicel', component: VehicelComponent
+        },
+        {
+          path: 'role', component: RoleComponent
+        },
+        {
+          path: 'employee', component: EmployeeComponent
+        },
+        {
+          path: 'customer', component: CustomerComponent
+        },
+        {
+          path: 'invoice', component: InvoiceComponent
+        },
+        {
+          path: 'payment', component: PaymentComponent
+        },
+        {
+          path: 'rate', component: RateSchedulerComponent
+        },
+        { path: '**', redirectTo: '', pathMatch: 'full' }
 
-       ]
+      ]
     },
 
-    
+
   ]
 }
-  ];
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
