@@ -3,21 +3,27 @@
   <span class="material-icons">close</span>
 </button>
 <mat-dialog-content class="mat-typography">
-  <form>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" *ngIf="!isOtpVerify">
     <div class="form-row">
       <label for="phonenumber" class="form-label" autocomplete="off">Enter your phone Number</label>
-      <input type="tel" class="form-control"  id="phone">
-      <span class="validation-error">Please Enter correct Number</span>
+      <input type="tel" class="form-control"  id="phone" formControlName="mobileNumber">
+      <span *ngIf="f.mobileNumber.touched && f.mobileNumber.invalid" class="validation-error">
+        <div *ngIf="f.mobileNumber.errors.required">Mobile Number is required.</div>
+        <div *ngIf="f.mobileNumber.errors.pattern">Please, Enter 10 digit Mobile Number.</div>
+      
+      </span>
+      
   </div>
-  <div class="form-row">
+  <div class="form-row" *ngIf="isSendOtp">
     <label for="phonenumber" class="form-label">Enter OTP</label>
-    <input type="text" class="form-control submit-btn"  id="otp">
-    <span class="validation-error">Please Enter correct OTP</span>
+    <!-- <input type="text" class="form-control submit-btn"  id="otp" > -->
+    <otp [setting]="settings" (onValueChange)="onInputChange($event)"></otp>
+    <!-- <span class="validation-error">Please Enter correct OTP</span> -->
   </div>
-  <button mat-flat-button color="primary">Submit</button>
+  <button mat-flat-button color="primary" [disabled]="!loginForm.valid">Submit</button>
   </form>
 
-  <form>
+  <form *ngIf="isOtpVerify">
     <div class="form-row">
       <label for="phonenumber" class="form-label" autocomplete="off">Enter your Address</label>
       <textarea placeholder="" class="form-control"></textarea>

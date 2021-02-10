@@ -7,6 +7,8 @@ import {MatButtonModule} from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AngularOtpLibModule } from 'angular-otp-box';
 @NgModule({
   declarations: [
 
@@ -15,7 +17,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     CommonModule,
     RouterModule,
     MatDialogModule,
-    MatButtonModule,MatFormFieldModule, MatDatepickerModule,MatInputModule 
+    MatButtonModule,MatFormFieldModule, MatDatepickerModule,MatInputModule,ReactiveFormsModule,AngularOtpLibModule 
   ],
   entryComponents: [
     ModalComponent

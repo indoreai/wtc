@@ -16,7 +16,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     BrowserModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    BrowserAnimationsModule, MatNativeDateModule, 
+    BrowserAnimationsModule, MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
