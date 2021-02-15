@@ -1,6 +1,6 @@
 <ul class="sidebar-menu">
-    <li class="submenu"><a routerLink="dashboard" routerLinkActive="active"><i class="fa fa-tachometer" aria-hidden="true"></i> <span>Dashboard</span></a>
-        <ul>
+    <li class="submenu" (click)="isShow()"><a routerLink="dashboard" routerLinkActive="active"><i class="fa fa-tachometer" aria-hidden="true" ></i> <span>Dashboard</span></a>
+        <ul class="display-property" id="display-property">
             <li><a>Submenu 1</a></li>
             <li><a>Submenu 2</a></li>
             <li><a>Submenu 3</a></li>
