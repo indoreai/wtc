@@ -1,13 +1,26 @@
 
 ul{float: left; width: 100%; margin-bottom: 0;
-    li{list-style: none;font-family: 'Open Sans', sans-serif;position: relative; float: left; width: 100%; line-height: 14px;
-        a{padding: 10px; float: left; width: 100%; clear: both; color: #666; cursor: pointer; font-size: 14px;
-            i{margin-right: 10px;transition: 0.3s;}
-            &:hover{background: #56a0d9;color: #fff; line-height: 14px;}
-        }
-        .active{
-            background: #2481c9;color: #fff;
-            &::before{transform: rotateZ(-90deg);}
+  li{list-style: none;font-family: 'Open Sans', sans-serif;position: relative; float: left; width: 100%; line-height: 14px;       a{padding: 10px; float: left; width: 100%; clear: both; color: #666; cursor: pointer; font-size: 14px;
+    display: flex; white-space: nowrap;
+          i{margin-right: 10px;transition: 0.3s;}
+          &:hover{background: #56a0d9;color: #fff; line-height: 14px;}
+      }
+       .active{
+           background: #2481c9;color: #fff;
+           &::before{transform: rotateZ(-90deg);}
         }
     }
 }
+::ng-deep .sidebar-collapse {
+li{
+    span{display: none;}
+}
+}
+
+.sidebar-menu{
+    li{
+        ul{display: none;}
+    }
+}
+
+

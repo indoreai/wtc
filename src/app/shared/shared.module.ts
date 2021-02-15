@@ -9,6 +9,8 @@ import { MatInputModule } from '@angular/material/input';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AngularOtpLibModule } from 'angular-otp-box';
+import { MatMenuModule} from '@angular/material/menu';
+import { from } from 'rxjs';
 @NgModule({
   declarations: [
 
@@ -16,7 +18,7 @@ import { AngularOtpLibModule } from 'angular-otp-box';
   imports: [
     CommonModule,
     RouterModule,
-    MatDialogModule,
+    MatDialogModule,MatMenuModule,
     MatButtonModule,MatFormFieldModule, MatDatepickerModule,MatInputModule,ReactiveFormsModule,AngularOtpLibModule 
   ],
   entryComponents: [

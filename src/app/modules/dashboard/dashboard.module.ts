@@ -19,7 +19,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { AgGridModule } from 'ag-grid-angular';
-import {PanelMenuModule} from 'primeng/panelmenu';
+
 
 @NgModule({
   declarations: [
@@ -39,7 +39,7 @@ import {PanelMenuModule} from 'primeng/panelmenu';
     RateSchedulerComponent
   ],
   imports: [
-    CommonModule,PanelMenuModule,
+    CommonModule,
     DashboardRoutingModule,
     SharedModule, AgGridModule.withComponents([])
   ]

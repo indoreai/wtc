@@ -2,6 +2,7 @@
 
 /* color theme start */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap');
 @import "ag-grid-community/dist/styles/ag-grid.css";
 @import "ag-grid-community/dist/styles/ag-theme-alpine.css";
 
@@ -15,9 +16,9 @@ h1, h2, h3, h4, h5, h6{color: #1d5077;}
 h1{font-size: 40px;}
 h2{font-size: 26px !important;}
 ::-webkit-scrollbar {width: 8px;}
-::-webkit-scrollbar-track {background: #8eb4d1;}
-::-webkit-scrollbar-thumb {background: #76e37a;}
-::-webkit-scrollbar-thumb:hover {background: #6fd173;}
+::-webkit-scrollbar-track {background: #d7d7d7;}
+::-webkit-scrollbar-thumb {background: #5f86a5;border-radius: 8px;}
+::-webkit-scrollbar-thumb:hover {background: #537c9d;}
 
 
 body .form-control{border-radius: 0; margin-bottom: 15px; padding: 5px 10px 7px 10px; height: 32px; font-size: 14px;}
@@ -32,8 +33,10 @@ body textarea{height: 200px;}
 .mat-flat-button.mat-primary:hover{background:#5e8fb5;}
 
 app-dashboard-container{float: left; width: 100%; clear: both;
-    app-header{width: 100%;}
-    app-sidebar{width: 225px; height: calc(100vh - 40px); background: #fff; float: left;position: absolute; left: 0;transition: transform .3s ease-in-out,width .3s ease-in-out;}
+    app-header{width: 100%; }
+    ::-webkit-scrollbar{width: 3px !important;}
+    app-sidebar{width: 225px; height: calc(100vh - 40px); background: #fff; float: left;position: absolute; left: 0;transition: transform .3s ease-in-out,width .3s ease-in-out;
+        box-shadow: 0 2px 4px rgb(0 0 0 / 8%);overflow-x: hidden; overflow: auto;}
     app-admin{height: calc(100vh - 40px); width: 100%; float: left; padding-left: 240px;transition: transform .3s ease-in-out,padding .3s ease-in-out;background: #f1f2f7;overflow: hidden;
     padding-right: 15px;
     }
@@ -43,7 +46,7 @@ app-dashboard-container{float: left; width: 100%; clear: both;
 }
 
 .sidebar-collapse{
-    app-sidebar{width: 40px;}
+    app-sidebar{width: 40px;overflow-x: visible; overflow: visible;}
     app-admin{padding-left: 55px;}
 }
 
@@ -53,8 +56,8 @@ app-dashboard-container{float: left; width: 100%; clear: both;
 }
 
 /*------ag-grid-style------*/
-.ag-grid{width: 100%; height:500px;
-    .ag-header{height: 32px !important; min-height: 32px !important;}
+.ag-grid{width: 100%; height: calc(100vh - 110px);
+    .ag-header{height: 32px !important; min-height: 32px !important;background: #2481c9;}
     .ag-header-row{height: 32px !important; min-height: 32px !important;}
-    
+    .ag-header-cell-label{color: #fff;}
 }

@@ -19,12 +19,12 @@ export class VehicelComponent implements OnInit {
 
     });
   }
-  columnDefs = [{ field: "make" }, { field: "model" }, { field: "price" }];
+  columnDefs = [{ field: "SN" }, { field: "Number" }, { field: "WaterCapacity" }];
 
   rowData = [
-    { make: "Toyota", model: "Celica", price: 35000 },
-    { make: "Ford", model: "Mondeo", price: 32000 },
-    { make: "Porsche", model: "Boxter", price: 72000 }
+    { SN: "1", Number: "MP 09 AR 9343", WaterCapacity: 35000},
+    { SN: "2", Number: "MP 09 AR 9343", WaterCapacity: 32000},
+    { SN: "3", Number: "MP 09 AR 9343", WaterCapacity: 72000}
   ];
 
 

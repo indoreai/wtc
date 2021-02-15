@@ -7,7 +7,6 @@ import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { from } from 'rxjs';
 import { MatNativeDateModule } from '@angular/material/core';
-
 @NgModule({
   declarations: [
     AppComponent
