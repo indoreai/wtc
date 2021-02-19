@@ -16,7 +16,10 @@ export class HeaderComponent implements OnInit {
   openDialog():void  {
     const dialogRef = this.dialog.open(ModalComponent,{
       width: '450px',
-
+      data: {
+        openForModal: 'book',
+        title: 'Booking Text'
+      }
     });
     
   }

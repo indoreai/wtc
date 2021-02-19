@@ -16,7 +16,10 @@ export class VehicelComponent implements OnInit {
   openDialog():void  {
     const dialogRef = this.dialog.open(ModalComponent,{
       width: '450px',
-
+      data: {
+        openForModal: 'vehicle',
+        title: 'Vehicle'
+      }
     });
   }
   columnDefs = [{ field: "SN" }, { field: "Number" }, { field: "WaterCapacity" }];

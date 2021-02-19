@@ -1,65 +1,148 @@
-<h2 mat-dialog-title>Book Water Tanker</h2>
+<h2 mat-dialog-title>{{data.title}}</h2>
 <button mat-button mat-dialog-close class="close-btn">
   <span class="material-icons">close</span>
 </button>
 <mat-dialog-content class="mat-typography">
-  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" *ngIf="!isOtpVerify">
-    <div class="form-row">
-      <label for="name" class="form-label" autocomplete="off">Name</label>
-      <input type="text" class="form-control" id="name" formControlName="Name">
-    </div>
-    <div class="form-row">
-      <label for="phonenumber" class="form-label" autocomplete="off">Phone Number</label>
-      <input type="tel" class="form-control"  id="phone" formControlName="mobileNumber">
-      <span *ngIf="f.mobileNumber.touched && f.mobileNumber.invalid" class="validation-error">
-        <div *ngIf="f.mobileNumber.errors.required">Mobile Number is required.</div>
-        <div *ngIf="f.mobileNumber.errors.pattern">Please, Enter 10 digit Mobile Number.</div>
+  <!--FOR BOOKING MODAL START-->
+  <ng-container *ngIf="data['openForModal']=='book'">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" *ngIf="!isOtpVerify" >
+              <div class="form-row">
+                <label for="name" class="form-label" autocomplete="off">Name</label>
+                <input type="text" class="form-control" id="name" formControlName="name">
+              </div>
+              <div class="form-row">
+                <label for="phonenumber" class="form-label" autocomplete="off">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" formControlName="mobileNumber">
+                <span *ngIf="f.mobileNumber.touched && f.mobileNumber.invalid" class="validation-error">
+                  <div *ngIf="f.mobileNumber.errors.required">Mobile Number is required.</div>
+                  <div *ngIf="f.mobileNumber.errors.pattern">Please, Enter 10 digit Mobile Number.</div>
+                </span>
+              </div>
+              <div class="form-row" *ngIf="isSendOtp">
+                <label for="phonenumber" class="form-label">Enter OTP</label>
+                <!-- <input type="text" class="form-control submit-btn"  id="otp" > -->
+                <otp [setting]="settings" (onValueChange)="onInputChange($event)"></otp>
+                <!-- <span class="validation-error">Please Enter correct OTP</span> -->
+              </div>
+              <button mat-flat-button color="primary" [disabled]="!loginForm.valid">Submit</button>
+            </form>
+          
+            <form *ngIf="isOtpVerify">
+              <div class="form-row">
+                <label for="phonenumber" class="form-label" autocomplete="off">Enter your Address</label>
+                <textarea placeholder="" class="form-control"></textarea>
+                <span class="validation-error"></span>
+              </div>
+              <div class="form-row">
+                <label for="phonenumber" class="form-label">Water Required(Litter)</label>
+                <select class="form-control" id="capacity">
+                  <option>1000</option>
+                  <option>2000</option>
+                  <option>3000</option>
+                  <option>4000</option>
+                  <option>5000</option>
+                </select>
+                <span class="validation-error">Please Enter Water</span>
+              </div>
+          
+              <div class="form-row">
+                <label for="phonenumber" class="form-label">Rate</label>
+                <input type="text" class="form-control" value="1000">
+              </div>
+          
+              <div class="form-row date-row">
+                <label>Choose a date</label>
+                <div class="date-box">
+                  <input [matDatepicker]="picker" class="form-control">
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </div>
+              </div>
+              <button mat-flat-button color="primary">Order</button>
+            </form>
+  
+  </ng-container>
+  <!--FOR BOOKING MODAL END-->
+
+    <!--FOR ORDER MODAL START-->
+  <ng-container *ngIf="data['openForModal']=='gen_orders'">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" *ngIf="!isOtpVerify" >
+      <div class="form-row">
+        <label for="name" class="form-label" autocomplete="off">Name</label>
+        <input type="text" class="form-control" id="name" formControlName="name">
+      </div>
+      <div class="form-row">
+        <label for="phonenumber" class="form-label" autocomplete="off">Phone Number</label>
+        <input type="tel" class="form-control" id="phone" formControlName="mobileNumber">
+        <span *ngIf="f.mobileNumber.touched && f.mobileNumber.invalid" class="validation-error">
+          <div *ngIf="f.mobileNumber.errors.required">Mobile Number is required.</div>
+          <div *ngIf="f.mobileNumber.errors.pattern">Please, Enter 10 digit Mobile Number.</div>
+        </span>
+      </div>
+      <div class="form-row">
+        <label for="phonenumber" class="form-label" autocomplete="off">Enter your Address</label>
+        <textarea placeholder="" class="form-control"></textarea>
+        <span class="validation-error"></span>
+      </div>
+      <div class="form-row">
+        <label for="phonenumber" class="form-label">Water Required(Litter)</label>
+        <select class="form-control" id="capacity">
+          <option>1000</option>
+          <option>2000</option>
+          <option>3000</option>
+          <option>4000</option>
+          <option>5000</option>
+        </select>
+        <span class="validation-error">Please Enter Water</span>
+      </div>
+  
+      <div class="form-row">
+        <label for="phonenumber" class="form-label">Rate</label>
+        <input type="text" class="form-control" value="1000">
+      </div>
+  
+      <div class="form-row date-row">
+        <label>Choose a date</label>
+        <div class="date-box">
+          <input [matDatepicker]="picker" class="form-control">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </div>
+      </div>
+      <!-- <button mat-flat-button color="primary">Order</button> -->
+      <!-- <div class="form-row" *ngIf="isSendOtp">
+        <label for="phonenumber" class="form-label">Enter OTP</label>
+        <otp [setting]="settings" (onValueChange)="onInputChange($event)"></otp>
+      </div> -->
+      <button mat-flat-button color="primary" [disabled]="!loginForm.valid">Submit</button>
+    </form>
+  
+   
+</ng-container>
+  <!--FOR ORDER MODAL END-->
+
+      <!--FOR ORDER MODAL START-->
+      <ng-container *ngIf="data['openForModal']=='vehicle'">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" *ngIf="!isOtpVerify" >
+          <div class="form-row">
+            <label for="name" class="form-label" autocomplete="off">Vehicle Name</label>
+            <input type="text" class="form-control" id="name" formControlName="name">
+          </div>
+          <div class="form-row">
+            <label for="phonenumber" class="form-label" autocomplete="off">Vehicle Number</label>
+            <input type="tel" class="form-control" id="phone" formControlName="mobileNumber">
+            <span *ngIf="f.mobileNumber.touched && f.mobileNumber.invalid" class="validation-error">
+              <div *ngIf="f.mobileNumber.errors.required">Mobile Number is required.</div>
+              <div *ngIf="f.mobileNumber.errors.pattern">Please, Enter 10 digit Mobile Number.</div>
+            </span>
+          </div>
+         
+         
+        
+          <button mat-flat-button color="primary" [disabled]="!loginForm.valid">Submit</button>
+        </form>
       
-      </span>
-      
-  </div>
-  <div class="form-row" *ngIf="isSendOtp">
-    <label for="phonenumber" class="form-label">Enter OTP</label>
-    <!-- <input type="text" class="form-control submit-btn"  id="otp" > -->
-    <otp [setting]="settings" (onValueChange)="onInputChange($event)"></otp>
-    <!-- <span class="validation-error">Please Enter correct OTP</span> -->
-  </div>
-  <button mat-flat-button color="primary" [disabled]="!loginForm.valid">Submit</button>
-  </form>
-
-  <form *ngIf="isOtpVerify">
-    <div class="form-row">
-      <label for="phonenumber" class="form-label" autocomplete="off">Enter your Address</label>
-      <textarea placeholder="" class="form-control"></textarea>
-      <span class="validation-error"></span>
-  </div>
-  <div class="form-row">
-    <label for="phonenumber" class="form-label">Water Required(Litter)</label>
-    <select class="form-control" id="capacity">
-      <option>1000</option>
-      <option>2000</option>
-      <option>3000</option>
-      <option>4000</option>
-      <option>5000</option>
-    </select>
-    <span class="validation-error">Please Enter Water</span>
-  </div>
-
-  <div class="form-row">
-    <label for="phonenumber" class="form-label">Rate</label>
-    <input type="text" class="form-control" value="1000">
-  </div>
-
-  <div class="form-row date-row">
-    <label>Choose a date</label>
-    <div class="date-box">
-      <input [matDatepicker]="picker" class="form-control">
-      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
-    </div>
-</div>
-  <button mat-flat-button color="primary">Order</button>
-  </form>
-
+       
+    </ng-container>
+      <!--FOR ORDER MODAL END-->
 </mat-dialog-content>
-
