@@ -12,6 +12,10 @@ export class OrdersComponent implements OnInit {
   openDialog():void  {
     const dialogRef = this.dialog.open(ModalComponent,{
       width: '450px',
+      data: {
+        openForModal: 'gen_orders',
+        title: 'Order Text'
+      }
     });
   }
   columnDefs = [{ field: "SN" }, { field: "CustomerName" }, { field: "PhoneNumber" }, { field: "Address" }, { field: "Status" }];

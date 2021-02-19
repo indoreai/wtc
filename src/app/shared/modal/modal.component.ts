@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import {MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-modal',
@@ -13,14 +14,16 @@ export class ModalComponent implements OnInit {
   settings = {length: 4,numbersOnly: true,timer:20}
   loginForm: FormGroup = new FormGroup({});
   isOtpVerify = false;
-  constructor(private fb: FormBuilder) { 
+  constructor(private fb: FormBuilder,@Inject(MAT_DIALOG_DATA) public data: any) { 
     this.loginForm = fb.group({
+      name: [],
       mobileNumber: ['', [Validators.required,
          Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]]
     })
   }
 
   ngOnInit(): void {
+    console.error(this.data)
   }
 
   onSubmit() {
