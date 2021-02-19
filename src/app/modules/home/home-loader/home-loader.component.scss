@@ -1,7 +1,10 @@
-.mainPagebg{position: relative; margin-bottom: 20px; padding-top: 70px;overflow: hidden;}
+.mainPagebg{position: relative; margin-bottom: 20px; padding-top: 85px;overflow: hidden;}
 .mainPagebg::after{position: absolute; width:700px; height: 700px; background: #b3ecfc; display: block; content: ''; top: -150px; right: -140px;
 border-radius: 100%;border: solid 60px #fff;}
 .mainPagebg::before{position: absolute; width:900px; height: 900px; background: #b3ecfc; display: block; content: ''; top: -150px; right: -140px;
     border-radius: 100%;}
 
-.page-container{background: #fff;position: relative;z-index: 1;}
+.page-container{background:rgba(255, 255, 255, 0.8);position: relative;z-index: 1;}
+@media screen and (max-width: 991px) {
+    .mainPagebg{padding-top: 45px;}
+}

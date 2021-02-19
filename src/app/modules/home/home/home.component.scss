@@ -1,4 +1,5 @@
-
+h1{font-size: 36px; font-weight: 600;}
+p{font-size: 16px; line-height: 22px;}
 .about-box{
     margin-top: 50px;
     .welcome-box{
@@ -6,13 +7,14 @@
         h1{line-height: 32px;}
         p{margin-bottom: 10px;}
     }
-    img{width: 100%;}
+    img{max-width: 100%;border-radius: 20px; height: 300px;box-shadow: 0px 0px 10px 1px rgb(0 0 0 / 20%);
+    }
 }
-.services-box{padding-top: 50px;
+.services-box{padding-top: 30px;background:#f7faff; margin-top: 30px;padding-bottom:30px;
     h1{text-align: center;}
 }
-.product{width: 100%; height: 100px; background: #fff; border: solid 1px #fff;margin-bottom: 20px; font-size: 22px;
-    box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.15); justify-content: center; display: flex;align-items: center;}
+.product{width: 100%; height: 80px; background: #fff; border: solid 1px #fff;margin: 25px 0 0 0; font-size: 20px;
+    box-shadow:0px -1px 13px 2px rgb(47 105 252 / 10%); justify-content: center; display: flex;align-items: center; color: #1d5077;}
 
 @media screen and (max-width: 991px) {
     .about-box{padding-top: 15px;padding-bottom:15px;
