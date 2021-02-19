@@ -1,13 +1,14 @@
 <ul class="sidebar-menu">
-    <li class="submenu" (click)="isShow()"><a routerLink="dashboard" routerLinkActive="active"><i class="fa fa-tachometer" aria-hidden="true" ></i> <span>Dashboard</span></a>
-        <ul class="display-property" id="display-property">
+    <li class="parentMenu" (click)="isShow()"><a routerLink="dashboard" routerLinkActive="active"><i class="fa fa-tachometer" aria-hidden="true" ></i> <span>Dashboard</span></a>
+        <!-- <ul id="submenu">
             <li><a>Submenu 1</a></li>
             <li><a>Submenu 2</a></li>
             <li><a>Submenu 3</a></li>
             <li><a>Submenu 4</a></li>
-        </ul>
+        </ul> -->
     </li>
-    <li><a routerLink="vehcel" routerLinkActive="active"><i class="fa fa-bus" aria-hidden="true"></i> <span>Vehicle Registration</span></a></li>
+    <li><a routerLink="orders" routerLinkActive="active"><i class="fa fa-bus" aria-hidden="true"></i> <span>Orders</span></a></li>
+    <li><a routerLink="vehicel" routerLinkActive="active"><i class="fa fa-bus" aria-hidden="true"></i> <span>Vehicle</span></a></li>
     <li><a routerLink="role" routerLinkActive="active"><i class="fa fa-unlock-alt" aria-hidden="true"></i> <span>Role management</span></a></li>
     <li><a routerLink="employee" routerLinkActive="active"><i class="fa fa-users" aria-hidden="true"></i> <span>Employee</span></a></li>
     <li><a routerLink="customer" routerLinkActive="active"><i class="fa fa-user" aria-hidden="true"></i> <span>Customers</span></a></li>

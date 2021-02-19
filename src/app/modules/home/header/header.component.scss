@@ -1,14 +1,13 @@
 header{
-    position: fixed; top: 0;z-index: 99; background: #fff;
-    width: 100%;border-bottom: solid 1px #efefef;
-        .navbar{width: 100%;padding:0;
+    position: fixed; top: 0;z-index: 99;
+    width: 100%;
+        .navbar{width: 100%;padding:0;display:inline-block !important;
             .logo{font-size:20px; line-height: 20px; color: #2481c9;padding: 12px 0 15px 0;}
                 ul{
                     padding: 0;
-                    margin: 0 15px 0 0;
                     li{list-style: none; display: inline-block; padding: 0 10px;
                         :last-child{padding-right: 0;}
-                        a{color: #2481c9 !important; height: 47px;display: inline-block; line-height:32px;padding-left: 0;}
+                        a{color: #2481c9 !important;display: inline-block;padding-left: 0; padding: 0; margin-top: 5px;}
                         :hover, .active{color: #2481c9 !important; border-bottom: solid 2px #2481c9;}
                         @media only screen and (max-width: 420px) {
                             padding: 0 8px;
@@ -17,9 +16,12 @@ header{
                 
                 }
         }
-    .book-now{background:transparent; cursor: pointer; padding: 0; float: right; margin-left: 15px;
-        a{color: #fff !important;height: 36px;padding: 9px 22px;background: #2481c9;line-height: 18px; border-radius: 40px;}
+   
+    .collapse{box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.15); margin-top: 15px;border-radius: 20px; float: right;padding: 10px 20px;background: #fff;}
+    .book-now{border: solid 1px #2481c9;padding: 5px 14px !important; margin: 0; border-radius: 16px;margin-top:0 !important;cursor: pointer;
+    &:hover{border-bottom:solid 1px #2481c9 !important;}
     }
+    .navbar-brand{margin-top: 26px;}
 }
   
 @media screen and (max-width: 991px) {

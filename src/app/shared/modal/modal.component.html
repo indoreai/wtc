@@ -5,7 +5,11 @@
 <mat-dialog-content class="mat-typography">
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" *ngIf="!isOtpVerify">
     <div class="form-row">
-      <label for="phonenumber" class="form-label" autocomplete="off">Enter your phone Number</label>
+      <label for="name" class="form-label" autocomplete="off">Name</label>
+      <input type="text" class="form-control" id="name" formControlName="Name">
+    </div>
+    <div class="form-row">
+      <label for="phonenumber" class="form-label" autocomplete="off">Phone Number</label>
       <input type="tel" class="form-control"  id="phone" formControlName="mobileNumber">
       <span *ngIf="f.mobileNumber.touched && f.mobileNumber.invalid" class="validation-error">
         <div *ngIf="f.mobileNumber.errors.required">Mobile Number is required.</div>
@@ -41,6 +45,11 @@
     <span class="validation-error">Please Enter Water</span>
   </div>
 
+  <div class="form-row">
+    <label for="phonenumber" class="form-label">Rate</label>
+    <input type="text" class="form-control" value="1000">
+  </div>
+
   <div class="form-row date-row">
     <label>Choose a date</label>
     <div class="date-box">
@@ -49,7 +58,7 @@
       <mat-datepicker #picker></mat-datepicker>
     </div>
 </div>
-  <button mat-flat-button color="primary">Submit</button>
+  <button mat-flat-button color="primary">Order</button>
   </form>
 
 </mat-dialog-content>

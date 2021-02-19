@@ -2,4 +2,21 @@ header{
     background: #fff; height: 40px; border-bottom: 1px solid #f1f2f7; 
     button{margin:7px 5px 6px 0;}
     .logo-name{font-size: 26px; line-height: 36px;padding-right: 15px; color: #2481c9; float: left;}
+    ul{float: right;list-style: none;
+        li{
+            img{width: 30px; height: 30px; border: solid 1px #ddd; border-radius: 100%;}
+            button{padding: 0; margin: 0;min-width: inherit;border-radius:100%;
+                &:hover{background: transparent;}
+            span{padding-left: 10px;}
+            ::ng-deep .mat-button-ripple, ::ng-deep .mat-button-focus-overlay{display: none !important;}
+        }
+    }
+    }
+}
+::ng-deep .mat-menu-panel{box-shadow: none; border: solid 1px #ddd; margin-top: 2px;
+    ::ng-deep .mat-menu-content{ min-width: 150px !important;padding: 0 !important;
+    button{border-bottom: solid 1px #ddd;
+        &:last-child{border: none !important;}
+    }
+    }
 }

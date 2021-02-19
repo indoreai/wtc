@@ -12,12 +12,13 @@ export class SidebarComponent implements OnInit {
 
   isShow(){
     if(this.isToggle){
-      document.getElementById('display-property').style.display = "none";
+     document.getElementById('submenu').style.display = "none";
+   
       this.isToggle = false;
     } else{
-      document.getElementById('display-property').style.display = "block";
+   document.getElementById('submenu').style.display = "block";
       this.isToggle = true;
-    }
+    } 
   
   }
 }

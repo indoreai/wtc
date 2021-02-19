@@ -1,3 +1,8 @@
 .mat-flat-button.mat-primary{background: #2481c9;height: 30px; line-height: 10px;font-weight: 400; border-radius: 0;}
 .mat-flat-button.mat-primary:hover{background:#5e8fb5;}
-.vehicel-detail{border: solid 1px #ddd;height: 400px;background: #fff;}
+.vehicel-detail{border: solid 1px #ddd;background: #fff;padding: 15px 0;}
+.vehicel-detail{
+    span{padding-bottom:10px; float: left;padding:0 5px;margin-bottom: 15px;}
+    .available{color: #33a853;}
+    .booked{color: #ea4335;}
+}

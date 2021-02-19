@@ -20,6 +20,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { AgGridModule } from 'ag-grid-angular';
 import { MatMenuModule} from '@angular/material/menu';
+import { OrdersComponent } from './orders/orders.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { MatMenuModule} from '@angular/material/menu';
     CustomerComponent,
     InvoiceComponent,
     PaymentComponent,
-    RateSchedulerComponent
+    RateSchedulerComponent,
+    OrdersComponent
   ],
   imports: [
     CommonModule,

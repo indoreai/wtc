@@ -4,6 +4,7 @@ import { AdminComponent } from './admin/admin.component';
 import { DashboardContainerComponent } from './dashboard-container/dashboard-container.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MeetingComponent } from './meeting/meeting.component';
+import { OrdersComponent } from './orders/orders.component';
 import { VehicelComponent } from './vehicel/vehicel.component';
 import { RoleComponent } from './role/role.component';
 import { EmployeeComponent } from './employee/employee.component';
@@ -18,6 +19,9 @@ const routes: Routes = [{
       path: '', component: AdminComponent, children: [
         {
           path: 'dashboard', component: DashboardComponent
+        },
+        {
+          path: 'orders', component: OrdersComponent
         },
         {
           path: 'vehicel', component: VehicelComponent
