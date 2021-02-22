@@ -18,11 +18,11 @@ export class VehicelComponent implements OnInit {
       width: '450px',
       data: {
         openForModal: 'vehicle',
-        title: 'Vehicle'
+        title: 'Register Vehicle'
       }
     });
   }
-  columnDefs = [{ field: "SN" }, { field: "Number" }, { field: "WaterCapacity" }];
+  columnDefs = [{ field: "SN",  width: 60 }, { field: "Number" }, { field: "WaterCapacity" }];
 
   rowData = [
     { SN: "1", Number: "MP 09 AR 9343", WaterCapacity: 35000},

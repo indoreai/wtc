@@ -1,3 +1,131 @@
+<div class="row admin-top">
+    <div class="col-lg-8">
+        <h2>Customers</h2>
+    </div>
+    <div class="col-lg-4 text-right">
+        <button mat-flat-button color="primary" (click)="openDialog()">Add Customer</button>
+    </div>
+</div>
+
 <div class="row">
-    <div class="col-lg-12"><h2>Customer Management</h2></div>
+    <div class="col-lg-8">
+        <ag-grid-angular
+        class="ag-theme-alpine ag-grid"
+        [rowData]="rowData" 
+        [columnDefs]="columnDefs">
+        </ag-grid-angular>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="customer-details">
+            <div class="container">
+                <div class="row">
+                    <div class="orderThisMonth">Shree Maya</div>
+                    <div class="col-lg-12 top-heading"><h3>Shedule Rate</h3>
+                        <span class="icons" (click)="enable()"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                        <span class="icons" (click)="disable()"><i class="fa fa-times" aria-hidden="true"></i></span>
+                        <span class="icons" (click)="disable()"><i class="fa fa-floppy-o" aria-hidden="true"></i></span>
+                    </div>         
+                    <div class="col-lg-12">
+                        <div class="customer-orders">
+
+                            <div class="custom-row">
+                                <span>Date from</span>
+                                <span>
+                                    <div class="from-date">
+                                        <div class="date-box">
+                                        <input [matDatepicker]="picker" class="form-control" [disabled]="isDisabled">
+                                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                        <mat-datepicker #picker></mat-datepicker>
+                                      </div>
+                                    </div>
+                                    <div class="toDate">to</div>
+                                    <div class="to-date">
+                                        <div class="date-box">
+                                            <input [matDatepicker]="picker1" class="form-control" [disabled]="isDisabled">
+                                            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                                            <mat-datepicker #picker1></mat-datepicker>
+                                          </div>
+                                    </div>
+                                </span>
+                            </div>
+
+                            <div class="custom-row">
+                                <span>3000 Litter</span>
+                                <span><input type="text" value="" class="custom-input" [disabled]="isDisabled"></span>
+                            </div>
+
+                            <div class="custom-row">
+                                <span>5000 Litter</span>
+                                <span><input type="text" value="" class="custom-input" [disabled]="isDisabled"></span>
+                            </div>
+
+                            <div class="custom-row">
+                                <span>10000 Litter</span>
+                                <span><input type="text" value="" class="custom-input" [disabled]="isDisabled"></span>
+                            </div>
+
+                            <div class="custom-row">
+                                <span>15000 Litter</span>
+                                <span><input type="text" value="" class="custom-input" [disabled]="isDisabled"></span>
+                            </div>      
+                        </div>
+                    </div>
+
+                   
+
+                    <div class="col-lg-12"><h3>Total Order</h3></div>         
+                    <div class="col-lg-12">
+                        <div class="customer-orders">
+
+                            <div class="custom-row">
+                                <span>Date from</span>
+                                <span>
+                                    <div class="from-date">
+                                        <div class="date-box">
+                                        <input [matDatepicker]="picker2" class="form-control">
+                                        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                                        <mat-datepicker #picker2></mat-datepicker>
+                                      </div>
+                                    </div>
+                                    <div class="toDate">to</div>
+                                    <div class="to-date">
+                                        <div class="date-box">
+                                            <input [matDatepicker]="picker3" class="form-control">
+                                            <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                                            <mat-datepicker #picker3></mat-datepicker>
+                                          </div>
+                                    </div>
+                                </span>
+                            </div>
+
+                            <div class="custom-row">
+                                <span>3000 Litter</span>
+                                <span>5 Tanker</span>
+                            </div>
+
+                            <div class="custom-row">
+                                <span>5000 Litter</span>
+                                <span>10 Tanker</span>
+                            </div>
+
+                            <div class="custom-row">
+                                <span>10000 Litter</span>
+                                <span>2 Tanker</span>
+                            </div>
+
+                            <div class="custom-row">
+                                <span>15000 Litter</span>
+                                <span>8 Tanker</span>
+                            </div>      
+                        </div>
+                    </div>
+
+                </div>
+
+                
+            </div>
+            
+        </div>
+    </div>
 </div>

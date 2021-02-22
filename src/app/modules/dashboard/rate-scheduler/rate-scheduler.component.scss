@@ -1,0 +1,11 @@
+.rate-shedular{border: solid 1px #ddd; background: #fff; height: calc(100vh - 110px);
+    h3{font-weight: 500; margin: 5px 0 10px 0;}
+    .date-box{position: relative;
+    input{width:calc(100% - 30px); }
+}
+}
+::ng-deep .date-box .mat-button-base{height: 32px; width: 32px; background: #2481c9;border-radius: 0;color: #fff;
+    line-height: 10px;
+    button{height: 32px; width: 32px; color: #fff;}
+}
+::ng-deep .mat-icon-button{position: absolute; top: 0; right: 0;}

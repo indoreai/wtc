@@ -68,24 +68,19 @@
   <ng-container *ngIf="data['openForModal']=='gen_orders'">
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" *ngIf="!isOtpVerify" >
       <div class="form-row">
-        <label for="name" class="form-label" autocomplete="off">Name</label>
-        <input type="text" class="form-control" id="name" formControlName="name">
+        <label for="name" class="form-label" autocomplete="off">Customer Name</label>
+        <select class="form-control" id="capacity">
+          <option>Select Customer</option>
+          <option>Shree Maya Vijay Nagar, Indore</option>
+          <option>Bombay Hospital, Indore</option>
+          <option>Sayaji Hotel</option>
+          <option>Meghdoot Garden</option>
+        </select>
       </div>
+     
+     
       <div class="form-row">
-        <label for="phonenumber" class="form-label" autocomplete="off">Phone Number</label>
-        <input type="tel" class="form-control" id="phone" formControlName="mobileNumber">
-        <span *ngIf="f.mobileNumber.touched && f.mobileNumber.invalid" class="validation-error">
-          <div *ngIf="f.mobileNumber.errors.required">Mobile Number is required.</div>
-          <div *ngIf="f.mobileNumber.errors.pattern">Please, Enter 10 digit Mobile Number.</div>
-        </span>
-      </div>
-      <div class="form-row">
-        <label for="phonenumber" class="form-label" autocomplete="off">Enter your Address</label>
-        <textarea placeholder="" class="form-control"></textarea>
-        <span class="validation-error"></span>
-      </div>
-      <div class="form-row">
-        <label for="phonenumber" class="form-label">Water Required(Litter)</label>
+        <label for="phonenumber" class="form-label">Water Required (in Litter)</label>
         <select class="form-control" id="capacity">
           <option>1000</option>
           <option>2000</option>
@@ -121,15 +116,15 @@
 </ng-container>
   <!--FOR ORDER MODAL END-->
 
-      <!--FOR ORDER MODAL START-->
+      <!--FOR vehicle MODAL START-->
       <ng-container *ngIf="data['openForModal']=='vehicle'">
         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" *ngIf="!isOtpVerify" >
           <div class="form-row">
-            <label for="name" class="form-label" autocomplete="off">Vehicle Name</label>
-            <input type="text" class="form-control" id="name" formControlName="name">
+            <label for="Vehicle-Number" class="form-label" autocomplete="off">Vehicle Number</label>
+            <input type="text" class="form-control" id="name" formControlName="Vehicle-Number">
           </div>
           <div class="form-row">
-            <label for="phonenumber" class="form-label" autocomplete="off">Vehicle Number</label>
+            <label for="phonenumber" class="form-label" autocomplete="off">Water Capacity (in liters)</label>
             <input type="tel" class="form-control" id="phone" formControlName="mobileNumber">
             <span *ngIf="f.mobileNumber.touched && f.mobileNumber.invalid" class="validation-error">
               <div *ngIf="f.mobileNumber.errors.required">Mobile Number is required.</div>
@@ -144,5 +139,74 @@
       
        
     </ng-container>
-      <!--FOR ORDER MODAL END-->
+      <!--FOR vehicle MODAL END-->
+
+      <!-- FOR add_customer MODAL START -->
+      <ng-container *ngIf="data['openForModal']=='add_customer'">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" *ngIf="!isOtpVerify" >
+          <div class="form-row">
+            <label for="name" class="form-label" autocomplete="off">Name</label>
+            <input type="text" class="form-control" id="name" formControlName="name">
+          </div>
+
+          <div class="form-row">
+            <label for="phonenumber" class="form-label" autocomplete="off">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" formControlName="phonenumber">
+          </div>
+         
+          <div class="form-row">
+            <label for="email" class="form-label" autocomplete="off">Email</label>
+            <input type="text" class="form-control" id="email" formControlName="email">
+          </div>
+
+          <div class="form-row">
+            <label for="phonenumber" class="form-label" autocomplete="off">Enter your Address</label>
+            <textarea placeholder="" class="form-control"></textarea>
+            <span class="validation-error"></span>
+          </div>
+        
+          <button mat-flat-button color="primary" [disabled]="!loginForm.valid">Submit</button>
+        </form>
+      
+       
+    </ng-container>
+      <!-- FOR add_customer MODAL END-->
+
+
+        <!-- FOR EMPLOYEE MODAL START -->
+        <ng-container *ngIf="data['openForModal']=='employee_list'">
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" *ngIf="!isOtpVerify" >
+            <div class="form-row">
+              <label for="name" class="form-label" autocomplete="off">Name</label>
+              <input type="text" class="form-control" id="name" formControlName="name">
+            </div>
+  
+            <div class="form-row">
+              <label for="phonenumber" class="form-label" autocomplete="off">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" formControlName="phonenumber">
+            </div>
+           
+            <div class="form-row">
+              <label for="email" class="form-label" autocomplete="off">Email</label>
+              <input type="text" class="form-control" id="email" formControlName="email">
+            </div>
+  
+            <div class="form-row">
+              <label for="phonenumber" class="form-label" autocomplete="off">Role</label>
+              <select class="form-control">
+                <option selected>Assign Role</option>
+                <option value="1">Admin</option>
+                <option value="2">Driver</option>
+                <option value="3">HR</option>
+                <option value="3">Accountant</option>
+              </select>
+            </div>
+          
+            <button mat-flat-button color="primary" [disabled]="!loginForm.valid">Submit</button>
+          </form>
+        
+         
+      </ng-container>
+        <!-- FOR EMPLOYEE MODAL END-->
+
 </mat-dialog-content>
